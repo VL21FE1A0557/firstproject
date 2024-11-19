@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online HTML Editor</title>
+</head>
+<body>
+    <h1></h1>
+    <input type="text" id="search"><button id="btn">click here</button>
+    <div id="demo"></div>
+    <script>
+        let a = document.getElementById("demo");
+        let b = document.getElementById("search");
+        let c=document.getElementById("btn");
+        // Add an event listener for the input field
+        c.addEventListener("click", function () {
+            // Update the query value as the user types
+            let query = b.value;
+            a.innerHTML = "Search value: " + query;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<html>
+
+<head>
+    <title>my project</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+           
+//background-image:url('https://img.freepik.com/premium-vector/career-website-banner-concept-with-thin-line-flat-design_56103-101.jpg');
+ /*background-image: url(https://w7.pngwing.com/pngs/209/885/png-transparent-finding-the-right-career-path-career-counseling-job-career-pathways-student-text-people-logo.png);*/
+//background-image:url('https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+background-image:url("istockphoto-535677723-612x612.jpg");
+
+            background-repeat: no-repeat;
+            /*background-position: center;*/
+            background-position:0; 
+            background-size: cover;
+            background-color:rgb(98, 129, 228) ;
+        }
+       
+        nav{
+          background-color: rgb(13, 5, 28);
+          font-family: calibri;
+          padding-right:15px;
+          padding-left: 15px;
+         
+         
+        }
+        .nav-bar{
+          display:flex;
+          align-items: center;
+          justify-content: space-around;
+          margin: 0px;
+         
+          
+          
+        }
+      
+        li{
+          margin-right: 100px;
+          list-style: none;
+          display: inline-block;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          padding-left: 22px;
+        }
+        li:hover
+        {
+          background-color: #2b6dfb;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          padding-left: 22px;
+          border-radius: 10px;
+        }
+        li a
+        {
+          color: rgb(239, 234, 234);
+          font-family: 18px;
+          font-weight: bold;
+          margin-right: 25px;
+          text-decoration: none;
+        }
+        #search_container {
+            text-align: center;
+            padding-top: 100px; 
+        }
+
+        #search-bar {
+            width: 500px;
+            padding: 15px;
+            font-size: 20px;
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 20px;
+            display: inline-block; 
+        }#search-card {
+            width: 700px;
+            padding: 20px;
+            background: rgba(255,255,255,0.55);
+            background: rgba(167, 162, 214, 0.55);
+-webkit-backdrop-filter: blur(1px);
+backdrop-filter: blur(1px);
+border: 1px solid rgba(245, 240, 240, 0.275);
+            border-radius: 10px;
+            display: inline-block;
+            
+
+
+        }
+
+        input[type="submit"]  {
+            width: 70px;
+            padding: 15px;
+            font-size: 12px;
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 20px;
+            justify-content: center;
+        }
+
+        
+        @keyframes typing{
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+        h1 {
+            color: blue;
+            text-align: center;
+            font-size: 72px;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 4s steps(72, end) 1;
+        }
+    </style>
+</head>
+
+<body>
+<nav>
+  <div class="nav-bar">
+    <ul>
+      <li><a>HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li><a href="jobs.html">JOBS</a></li>
+      <li><a href="signup.html">SIGN IN</a></li>
+    </ul>
+  </div>
+  
+</nav>
+    <h1>CAREER PATH EXPLORER</h1>
+    <div id="search_container">
+<div id="search-card">
+<form id="search-form" action="results.html" method="GET">
+        <input type="text" id="search-bar" name="query" placeholder="find your path here">
+        <input type="submit" value="search"></form>
+    </div></div>
+</body><script>
+window.onload=myfun;
+function myfun(){
+alert("welcome to career path explorer");}
+const searchForm = document.getElementById('search-form');
+searchForm.addEventListener('submit', function (event) {
+    event.preventDefault(); 
+
+    
+    const query = document.getElementById('search-bar').value;
+if(query==""){
+alert("please enter text to check");}
+
+    
+    window.location.href = `results.html?query=${encodeURIComponent(query)}`;
+});</script>
+</html>
